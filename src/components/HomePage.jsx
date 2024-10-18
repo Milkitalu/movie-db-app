@@ -25,21 +25,21 @@ function HomePage() {
     }, [category, page]);
 
 return (
-    <div>
-        <h1>Movies</h1>
-        <div>
+    <div className="p-4">
+        <h1 className="text-2xl mb-4">Movie-App</h1>
+        <div className="flex space-x-r mb-4">
             {categories.map((cat) => (
                 <button 
                      key={cat}
                      onClick={() => {setCategory(cat); setPage(1);}}
-                     className=""
+                     className={`bg-blue-500 text-white px-4 py-2 rounded ${category === cat ? 'font-bold' : ''} `}
                 >
                     {cat.replace('_', '')}
                 </button>
             ))}
         </div>
 
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {movies.map((movie) => (
                 <MovieCard key={movie.id} movie={movie} addFavorite={addFavorite} />
             ))}

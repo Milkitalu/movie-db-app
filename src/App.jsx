@@ -16,11 +16,13 @@ function App() {
     <Router>
       <div className={theme === 'dark' ? 'bg-gray-900 text-white': 'bg-white text-black'}>
         <ThemeToggle />
+        
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/favorites' element={<Favorites />} />
           <Route path='/movie/:id' element={<MovieDetails />} />
           <Route path='/search' element={<SearchMovie />} />
+          
         </Routes>
       </div>
     </Router>

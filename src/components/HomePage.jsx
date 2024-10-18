@@ -5,7 +5,7 @@ import { fetchMovies } from '../movieapi/movieFetching';
 import { useAppContext } from '../context/AppContext';
 import MovieCard from './MovieCard';
 
-const categories = ['popular', 'top_rated', 'now_playing' ];
+
 
 function HomePage() {
     const { favorites, addFavorite } = useAppContext();
@@ -13,6 +13,8 @@ function HomePage() {
     const [category, setCategory] = useState('popular');
     const [page, setPage] = useState(1);
     const [totalpages, setTotalPages] = useState(0);
+
+    const categories = ['popular', 'top_rated', 'now_playing' ];
 
     useEffect(() => {
         const getMovies = async () => {
@@ -49,14 +51,14 @@ return (
             <button 
                 onClick={()=>setPage((prev) => Math.max(prev-1, 1))}
                 disabled={page === totalpages}
-                className=""
+                className="text-white px-4 py-2 rounded bg-gray-500 disabled:opacity-50"
             >
              Previous    
             </button>
             <button 
                 onClick={()=>setPage((prev) => Math.min(prev+1, totalpages))}
                 disabled={page === totalpages}
-                className=""
+                className="text-white px-4 py-2 rounded bg-gray-500 disabled:opacity-50"
             >
              Next    
             </button>

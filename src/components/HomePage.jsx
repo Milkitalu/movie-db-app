@@ -28,8 +28,7 @@ function HomePage() {
 
 return (
     <div className="p-4">
-        <h1 className="text-2xl mb-4">Movie-App</h1>
-        <div className="flex space-x-r mb-4">
+        <div className="flex mb-4 space-x-4">
             {categories.map((cat) => (
                 <button 
                      key={cat}
@@ -43,7 +42,7 @@ return (
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {movies.map((movie) => (
-                <MovieCard key={movie.id} movie={movie} addFavorite={addFavorite} />
+                <MovieCard key={movie.id} movie={movie} addFavorite={addFavorite} favorites={favorites}/>
             ))}
         </div>
 

@@ -6,6 +6,7 @@ import MovieCard from './MovieCard';
 import { useAppContext } from "../context/AppContext";
 
 function SearchMovie() {
+    
     const { addFavorite } = useAppContext();
     const [query, setQuery] = useState('');
     const [movies, setMovies] = useState([]);
@@ -18,7 +19,7 @@ function SearchMovie() {
 
     return (
         <div className="p-4">
-            <h1 className="text-2xl mb-4"> Search Movies </h1>
+            {/* <h1 className="text-2xl mb-4"> Search Movies </h1> */}
             <form onSubmit={handleSearch} className="mb-4">
                 <input type="text"
                        value={query}
@@ -36,7 +37,7 @@ function SearchMovie() {
                 {movies.length > 0 ? (
                     movies.map((movie) => <MovieCard key={movie.id} movie={movie} addFavorite={addFavorite} />)
                 ) : (
-                    <p>No Results Found.</p>
+                    ''
                 )}
             </div>
         </div>

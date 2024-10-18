@@ -34,12 +34,12 @@ function MovieDetails() {
 
 
     return (
-        <div>
-            <h1>{movie.title}</h1>
-            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}/>
+        <div className="p-4">
+            <h1 className="text-2xl mb-4">{movie.title}</h1>
+            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className="mb-4"/>
             <p>{movie.overview}</p>
-            <button onClick={toggleFavorite} className={`mt-4 ${isFavorite} ? 'bg-red-500' : 'bg-gree-500' text-white px-4 py-2 rounded`}>
-                {isFavorite ? 'Remove from Favorites ' : 'Add TO Favorites'}
+            <button onClick={toggleFavorite} className={`mt-4 ${isFavorite ? 'bg-red-500' : 'bg-green-500'} text-white px-4 py-2 rounded`}>
+                {isFavorite ? 'Remove from Favorites ' : 'Add To Favorites'}
             </button>
         </div>
     );

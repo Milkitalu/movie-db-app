@@ -15,7 +15,7 @@ function Favorites() {
                             <MovieCard movie={movie} />
                             <button onClick={() => removeFavorite(movie.id)} className="text-white py-1 px-2 rounded mt-2 bg-red-500 ">
                                 Remove
-                                </button>
+                            </button>
                         </div>
                     ))
                 ) : (

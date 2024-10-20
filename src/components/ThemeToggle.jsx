@@ -1,4 +1,5 @@
-
+// used to change background of the page from light to dark
+// and viseversa based on users need.
 
 import {useAppContext} from '../context/AppContext';
 
@@ -13,3 +14,4 @@ function ThemeToggle() {
 }
 
 export default ThemeToggle;
+

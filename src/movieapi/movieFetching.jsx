@@ -1,3 +1,6 @@
+
+// fetches Movies, Movie detail information from API and provide function for searching movie
+
 import axios from 'axios';
 
 
